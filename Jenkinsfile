@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'This is a test message'
+            echo '"Get the Driver Path ${ChromedriverPath}"'
           }
         }
 
@@ -24,5 +25,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChromedriverPath = 'C:\\ProgramData\\chocolatey\\lib\\chromedriver\\tools\\chromedriver.exe'
   }
 }
